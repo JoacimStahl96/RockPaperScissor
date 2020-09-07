@@ -21,9 +21,9 @@ public class RockPaperScissor {
 		while (counterPlayer1 < 3 && counterPlayer2 < 3) { // first to 3 wins
 
 			System.out.println(playerName1 + " choose: 1 Rock, 2 Scissor or 3 Paper. ");
-			String P1 = scan.nextLine(); // Player1 weapon choice
+			String P1 = scan.nextLine().toLowerCase(); // Player1 weapon choice
 			System.out.println(playerName2 + " choose: 1 Rock, 2 Scissor or 3 Paper. ");
-			String P2 = scan.nextLine(); // Player2 weapon choice
+			String P2 = scan.nextLine().toLowerCase(); // Player2 weapon choice
 			ChooseWinner(P1, P2); // calling the method into the loop in Main()
 		}
 	}
@@ -74,6 +74,8 @@ public class RockPaperScissor {
 				System.out.println(playerName2 + " wins");
 			}
 			break;
+		 default:
+			 System.out.println("Please pick a real weapon.");
 		}
 
 	}
